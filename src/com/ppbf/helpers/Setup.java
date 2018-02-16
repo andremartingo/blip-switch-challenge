@@ -15,6 +15,21 @@ public class Setup {
 
 	private static Scanner in = new Scanner(System.in);
 
+	private static final String FORMAT_PROJECT_TABLE =
+			"%-10s%-40s%-30s%-30s%-20s%n";
+
+	private static final String TABLE_SPACER_95 = "-----------------------------------"
+			+ "-----------------------------------------------------------------------------------------------";
+
+	public static void printTable(List<Bet> bet){
+		for(Bet b : bet){
+			System.out.format(FORMAT_PROJECT_TABLE, "Competition", "Name", "Market",
+					"Id", "Odd");
+			System.out.format(FORMAT_PROJECT_TABLE,b.competitionName,b.event.name,b.event.market.name,b.event.market.id,b.event.market.odds);
+			System.out.println(TABLE_SPACER_95);
+		}
+	}
+
 	public static void startSandbox() throws FileNotFoundException {
 		System.out.println("Welcome to the Switch Programme Exercise @Blip");
 
@@ -40,7 +55,8 @@ public class Setup {
 					// readFromFile returns a List with each entry representing a line of the file.
 					lines = readFromFile("resources/eventsWithDuplicates.csv");
 
-					System.out.println(Sandbox.ex2(lines));
+					List<Bet>  bet = Sandbox.ex2(lines);
+					printTable(bet);
 
 					break;
 				case 3:
@@ -57,7 +73,9 @@ public class Setup {
 					do {
 						System.out.println("Total Money:" + TOTAL_MONEY);
 
-						System.out.println(lines);
+						//System.out.println(lines);
+						List<Bet> betsToPrint = Sandbox.parse(lines);
+						printTable(betsToPrint);
 						boolean flag = false;
 						do {
 							System.out.print("Choose marketId:");

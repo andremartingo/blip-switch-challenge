@@ -18,6 +18,7 @@ public class SandboxTest {
 
     private final List<String> lines = new ArrayList<>();
 
+
     @Before
     public void setup() throws Exception {
         lines.add("Champions League;Liverpool vs Porto;Liverpool Wins;1;3.0");
