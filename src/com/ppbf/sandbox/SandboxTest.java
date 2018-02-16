@@ -111,13 +111,14 @@ public class SandboxTest {
     }
 
     @Test
-    public void ensure_UpdateBetsMapWhenMarketAlreadyExists() throws Exception {
+    public void ensureUpdateBetsMapWhenMarketAlreadyExists() throws Exception {
         Map<Long, BigDecimal> bets = new HashMap<>();
         bets = Sandbox.addMarketAndStateToMap(bets,1,new BigDecimal("2.0"));
         bets = Sandbox.addMarketAndStateToMap(bets,1,new BigDecimal("2.0"));
         Map<Long, BigDecimal> expectedBets = new HashMap<>();
         expectedBets.put(new Long("1"),new BigDecimal("4.0"));
         assertEquals(expectedBets,bets);
+        assertTrue(bets.size() == 1);
     }
 
 }
