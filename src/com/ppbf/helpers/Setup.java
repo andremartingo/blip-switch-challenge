@@ -48,7 +48,7 @@ public class Setup {
                     lines = readFromFile("resources/eventsWithoutDuplicates.csv");
 
                     BigDecimal TOTAL_MONEY = new BigDecimal("30.1");
-                    BigDecimal bet = new BigDecimal("0");
+                    BigDecimal updatedMoney = new BigDecimal("0");
 
 
                     List<Long> removedMarkets = new ArrayList<>();
@@ -67,10 +67,10 @@ public class Setup {
                         System.out.print("Choose stake:");
                         BigDecimal stake = in.nextBigDecimal();
                         if(stake.compareTo(TOTAL_MONEY)< 1) {
-                            bet = Sandbox.validateAndUpdateTotalMoney(lines, TOTAL_MONEY, marketId, stake);
-                            if (bet != null) {
-                                TOTAL_MONEY = bet;
-                                Sandbox.addMarketAndStateToMap(bets, marketId, stake);
+                            updatedMoney = Sandbox.validateAndUpdateTotalMoney(lines, TOTAL_MONEY, marketId, stake);
+                            if (updatedMoney != null) {
+                                TOTAL_MONEY = updatedMoney;
+                                bets = Sandbox.addMarketAndStateToMap(bets, marketId, stake);
                             } else {
                                 System.out.println("Error...");
                             }

@@ -74,7 +74,7 @@ public class Sandbox {
         }else {
             bets.put(marketId,stake);
         }
-        return null;
+        return bets;
     }
 
     // Ex3_2: Given a List of lines on the file;
