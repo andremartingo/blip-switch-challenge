@@ -1,6 +1,7 @@
 package com.ppbf.sandbox;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import com.ppbf.solutions.models.Bet;
@@ -8,7 +9,10 @@ import com.ppbf.solutions.models.Event;
 import com.ppbf.solutions.models.Market;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -65,16 +69,33 @@ public class SandboxTest {
     }
 
     @Test
-    public void ex3_1_1() throws Exception {
+    public void ensure_ExpectNullWhenPassInvalidMarketId() throws Exception {
         BigDecimal totalCash = Sandbox
-            .validateAndUpdateTotalMoney(lines, new BigDecimal("20.0"), 4, new BigDecimal("20.0"));
-        BigDecimal expectedTotalCash = new BigDecimal("20.0");
-        assertEquals(totalCash, expectedTotalCash);
+                .validateAndUpdateTotalMoney(lines, new BigDecimal("20.0"), 4, new BigDecimal("20.0"));
+        assertNull(totalCash);
 
         totalCash = Sandbox
-            .validateAndUpdateTotalMoney(lines, new BigDecimal("20.0"), 1, new BigDecimal("20.0"));
-        expectedTotalCash = new BigDecimal("0.0");
+                .validateAndUpdateTotalMoney(lines, new BigDecimal("20.0"), 1, new BigDecimal("10.0"));
+        BigDecimal expectedTotalCash = new BigDecimal("10.0");
         assertEquals(totalCash, expectedTotalCash);
+    }
+
+    @Test
+    public void ensure_UpdateTotalMoney() throws Exception {
+
+        BigDecimal totalCash = Sandbox
+                .validateAndUpdateTotalMoney(lines, new BigDecimal("20.0"), 1, new BigDecimal("10.0"));
+        BigDecimal expectedTotalCash = new BigDecimal("10.0");
+        assertEquals(totalCash, expectedTotalCash);
+    }
+
+    @Test
+    public void ensure_CandAddValidMarketIdToBetsMap() throws Exception {
+        Map<Long, BigDecimal> bets = new HashMap<>();
+        bets = Sandbox.addMarketAndStateToMap(bets,1,new BigDecimal("2.0"));
+        Map<Long, BigDecimal> expectedBets = new HashMap<>();
+        expectedBets.put(new Long("1"),new BigDecimal("2.0"));
+        assertEquals(expectedBets,bets);
     }
 
     @Test
