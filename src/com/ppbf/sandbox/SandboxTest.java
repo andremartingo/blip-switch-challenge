@@ -26,7 +26,7 @@ public class SandboxTest {
     }
 
     @Test
-    public void ex1() throws Exception {
+    public void ensureGetAllMarketsWithOneID() throws Exception {
         Bet ex1 = new Bet("Champions League",
             new Event("Liverpool vs Porto",
                 new Market("Liverpool Wins", 2, new BigDecimal("1.0"))));
@@ -44,7 +44,7 @@ public class SandboxTest {
     }
 
     @Test
-    public void ex2() throws Exception {
+    public void ensureSortAscending() throws Exception {
         Bet ex1 = new Bet("Champions League",
             new Event("Liverpool vs Porto",
                 new Market("Liverpool Wins", 2, new BigDecimal("1.0"))));
@@ -67,7 +67,7 @@ public class SandboxTest {
     }
 
     @Test
-    public void ensure_ExpectNullWhenPassInvalidMarketId() throws Exception {
+    public void ensureExpectNullWhenPassInvalidMarketId() throws Exception {
         BigDecimal totalCash = Sandbox
                 .validateAndUpdateTotalMoney(lines, new BigDecimal("20.0"), 4, new BigDecimal("20.0"));
         assertNull(totalCash);
@@ -79,7 +79,7 @@ public class SandboxTest {
     }
 
     @Test
-    public void ensure_UpdateTotalMoney() throws Exception {
+    public void ensureUpdateTotalMoney() throws Exception {
 
         BigDecimal totalCash = Sandbox
                 .validateAndUpdateTotalMoney(lines, new BigDecimal("20.0"), 1, new BigDecimal("10.0"));
@@ -88,21 +88,21 @@ public class SandboxTest {
     }
 
     @Test
-    public void ensure_ReturnTrueWhenAValidMarket() throws Exception {
+    public void ensureReturnTrueWhenAValidMarket() throws Exception {
         boolean result;
         result = Sandbox.validateMarket(lines,1);
         assertTrue(result);
     }
 
     @Test
-    public void ensure_ReturnFalseForAInvalidValidMarket() throws Exception {
+    public void ensureReturnFalseForAInvalidValidMarket() throws Exception {
         boolean result;
         result = Sandbox.validateMarket(lines,10);
         assertFalse(result);
     }
 
     @Test
-    public void ensure_CandAddValidMarketIdToBetsMap() throws Exception {
+    public void ensureCanAddValidMarketIdToBetsMap() throws Exception {
         Map<Long, BigDecimal> bets = new HashMap<>();
         bets = Sandbox.addMarketAndStateToMap(bets,1,new BigDecimal("2.0"));
         Map<Long, BigDecimal> expectedBets = new HashMap<>();
@@ -120,15 +120,4 @@ public class SandboxTest {
         assertEquals(expectedBets,bets);
     }
 
-
-    /*
-    @Test
-    public void ex3_1_2() throws Exception {
-        assertTrue(false);
-    }
-
-    @Test
-    public void ex3_2() throws Exception {
-        assertTrue(false);
-    }*/
 }
