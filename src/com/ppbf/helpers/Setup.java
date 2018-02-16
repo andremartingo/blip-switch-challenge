@@ -34,6 +34,7 @@ public class Setup {
 		System.out.println("Welcome to the Switch Programme Exercise @Blip");
 
 		boolean quit = false;
+		long marketId;
 
 		do {
 			printMenu();
@@ -44,11 +45,19 @@ public class Setup {
 				case 1:
 					// readFromFile returns a List with each entry representing a line of the file.
 					List<String> lines = readFromFile("resources/eventsWithDuplicates.csv");
+					List<Bet> allBets = parse(lines);
+					printTable(allBets);
+					boolean flag = false;
+					do {
+						System.out.print("Choose marketId:");
+						marketId = in.nextLong();
+						if (Sandbox.validateMarket(lines, marketId)) {
+							flag = true;
+						}
+					} while (flag == false);
 
-					System.out.print("Choose marketId:");
-					long marketId = in.nextLong();
-
-					System.out.println(Sandbox.getBetById(lines, marketId));
+					List<Bet> selectedBet = Sandbox.getBetById(lines, marketId);
+					printTable(selectedBet);
 
 					break;
 				case 2:
@@ -76,7 +85,7 @@ public class Setup {
 						//System.out.println(lines);
 						List<Bet> betsToPrint = Sandbox.parse(lines);
 						printTable(betsToPrint);
-						boolean flag = false;
+						flag = false;
 						do {
 							System.out.print("Choose marketId:");
 							marketId = in.nextLong();
