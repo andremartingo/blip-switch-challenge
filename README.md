@@ -2,6 +2,10 @@
 
 This is what a bet is all about
 
+## Demo
+<img width="600" height="300" title="Size Limit logo" src="./demo.gif">
+
+
   ### Competition:
 
     - Has a name
