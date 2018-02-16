@@ -1,20 +1,0 @@
-
-§%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÃÖ‹åıÿÿÿÿ8ìçáø™,
-csquid:S1192"ODefine a constant instead of duplicating this literal "Liverpool Wins" 3 times.(Ë¯¥U
-hsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(‰“æÿÿÿÿÿ8Â¾¸õ™,
-hsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(‘åıúÿÿÿÿ8°¸õ™,
- %squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(„ìûíúÿÿÿÿ
-csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ÂÕÚ8–ì„ö™,
-asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(„ìûíúÿÿÿÿ
-[squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(‘¿=
-¡%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(‘¿=8ÔşÔô™,
-§%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(³¥âàşÿÿÿÿ8ÔşÔô™,
-ksquid:S1192"QDefine a constant instead of duplicating this literal "Champions League" 5 times.(ÔùÏ›ùÿÿÿÿ
-asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(³¥âàşÿÿÿÿ
-hsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(Ç§Ë×úÿÿÿÿ8ß±çô™,
-¢%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÂÕÚ8™ğàø™,
-hsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(µÀóıÿÿÿÿ8…çô™,
-§%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(Ç§Ë×úÿÿÿÿ8ß±çô™,
-msquid:S1192"SDefine a constant instead of duplicating this literal "Liverpool vs Porto" 5 times.(•×»…ûÿÿÿÿ
-§%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(µÀóıÿÿÿÿ8…çô™,
-hsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ÃÖ‹åıÿÿÿÿ8ìçáø™,

@@ -1,41 +1,0 @@
-
-\squid:S1854"BRemove this useless assignment to local variable "removedMarkets".(áú©ùÿÿÿÿ
-Usquid:S1854";Remove this useless assignment to local variable "listBet".(ÊÉòøÿÿÿÿÿ
-R
-squid:S106"9Replace this use of System.out or System.err by a logger.(¥ÉĞ¬úÿÿÿÿ
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ì¥ó­ıÿÿÿÿ8¦›ÿú™,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(ë«±Ñûÿÿÿÿ8¯é’ú™,
-Osquid:S1118":Add a private constructor to hide the implicit public one.(‚îó
-L
-squid:S106"9Replace this use of System.out or System.err by a logger.(´ˆ¼>
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(‚è¥ÿÿÿÿÿ8¯é’ú™,
-R
-squid:S106"9Replace this use of System.out or System.err by a logger.(ıÍƒïÿÿÿÿÿ
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(±œ½µ
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(«ŠÔ­üÿÿÿÿ8¦›ÿú™,
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(óä™Ü8¦›ÿú™,
-lsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 38 to the 15 allowed.(Ú–ĞÊùÿÿÿÿ
-asquid:S2184"@Cast one of the operands of this addition operation to a "long".(Íüìıÿÿÿÿ8¯é’ú™,
-R
-squid:S106"9Replace this use of System.out or System.err by a logger.(¥ÉĞ¬úÿÿÿÿ
-L
-squid:S106"9Replace this use of System.out or System.err by a logger.(˜Ô•
-fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Š”ì`8êĞéú™,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(ñÙ°†ıÿÿÿÿ8¯é’ú™,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(îàÕçüÿÿÿÿ8¯é’ú™,
-Usquid:S1854"@Remove this useless assignment to local variable "updatedMoney".(ûÊ«ô
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ñïñ¨üÿÿÿÿ8¯é’ú™,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(ä«—ÿÿÿÿÿ8¯é’ú™,
-Jsquid:S1125")Remove the literal "false" boolean value.(ôÄØ¾ÿÿÿÿÿ8êÛ¹ú™,
-[squid:S1854":Remove this useless assignment to local variable "winner".(Íüìıÿÿÿÿ8¯é’ú™,
-gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÄŠ‰

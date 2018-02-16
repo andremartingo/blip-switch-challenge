@@ -1,14 +1,0 @@
-
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(àèªÝ
-Vsquid:S1118":Add a private constructor to hide the implicit public one.(Š¹¡›8Ì“×ú™,
-@squid:S1168"+Return an empty collection instead of null.(¥¹ï
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Œ“¯Í
-@squid:S1172"&Remove these unused method parameters.(Ü˜ÙÌþÿÿÿÿ
-isquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü˜ÙÌþÿÿÿÿ
-Usquid:S1854";Remove this useless assignment to local variable "listBet".(ÊÉòøÿÿÿÿÿ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ûßµøûÿÿÿÿ
-Usquid:S1854";Remove this useless assignment to local variable "listBet".(ÊÉòøÿÿÿÿÿ
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(’ë™¨
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(òÈ±·
-\squid:S1854";Remove this useless assignment to local variable "listBet".(ÊÉòøÿÿÿÿÿ8žà¥õ™,
