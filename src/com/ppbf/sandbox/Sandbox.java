@@ -27,7 +27,7 @@ public class Sandbox {
         return listBet;
 
     }
-    public static List<Bet> ex1(List<String> lines, long marketId) {
+    public static List<Bet> getBetById(List<String> lines, long marketId) {
         List<Bet> result = new ArrayList<>();
         List<Bet> listBet = new ArrayList<>();
         listBet = parse(lines);
@@ -42,7 +42,7 @@ public class Sandbox {
     // Ex2: Given a List of lines on the file;
     //      Write a function that sorts the competitions by odd value (ascending).
     // TIP: sort the whole line
-    public static List<Bet> ex2(List<String> lines) {
+    public static List<Bet> sortByOdd(List<String> lines) {
         List<Bet> listBet = new ArrayList<>();
         listBet = parse(lines);
         Collections.sort(listBet, (o1, o2) -> o1.event.market.odds.compareTo(o2.event.market.odds));

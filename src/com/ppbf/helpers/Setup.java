@@ -48,14 +48,14 @@ public class Setup {
 					System.out.print("Choose marketId:");
 					long marketId = in.nextLong();
 
-					System.out.println(Sandbox.ex1(lines, marketId));
+					System.out.println(Sandbox.getBetById(lines, marketId));
 
 					break;
 				case 2:
 					// readFromFile returns a List with each entry representing a line of the file.
 					lines = readFromFile("resources/eventsWithDuplicates.csv");
 
-					List<Bet>  bet = Sandbox.ex2(lines);
+					List<Bet>  bet = Sandbox.sortByOdd(lines);
 					printTable(bet);
 
 					break;

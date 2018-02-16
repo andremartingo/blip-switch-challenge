@@ -40,7 +40,7 @@ public class SandboxTest {
         expected.add(ex1);
         expected.add(ex2);
 
-        List<Bet> actual = Sandbox.ex1(lines, 2);
+        List<Bet> actual = Sandbox.getBetById(lines, 2);
         assertEquals(actual, expected);
     }
 
@@ -63,7 +63,7 @@ public class SandboxTest {
         expected.add(ex2);
         expected.add(ex3);
 
-        List<Bet> actual = Sandbox.ex2(lines);
+        List<Bet> actual = Sandbox.sortByOdd(lines);
         assertEquals(actual, expected);
     }
 
