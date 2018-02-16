@@ -1,9 +1,5 @@
 package com.ppbf.sandbox;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
-
 import com.ppbf.solutions.models.Bet;
 import com.ppbf.solutions.models.Event;
 import com.ppbf.solutions.models.Market;
@@ -15,6 +11,8 @@ import java.util.Map;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class SandboxTest {
 
@@ -90,6 +88,20 @@ public class SandboxTest {
     }
 
     @Test
+    public void ensure_ReturnTrueWhenAValidMarket() throws Exception {
+        boolean result;
+        result = Sandbox.validateMarket(lines,1);
+        assertTrue(result);
+    }
+
+    @Test
+    public void ensure_ReturnFalseForAInvalidValidMarket() throws Exception {
+        boolean result;
+        result = Sandbox.validateMarket(lines,10);
+        assertFalse(result);
+    }
+
+    @Test
     public void ensure_CandAddValidMarketIdToBetsMap() throws Exception {
         Map<Long, BigDecimal> bets = new HashMap<>();
         bets = Sandbox.addMarketAndStateToMap(bets,1,new BigDecimal("2.0"));
@@ -99,6 +111,18 @@ public class SandboxTest {
     }
 
     @Test
+    public void ensure_UpdateBetsMapWhenMarketAlreadyExists() throws Exception {
+        Map<Long, BigDecimal> bets = new HashMap<>();
+        bets = Sandbox.addMarketAndStateToMap(bets,1,new BigDecimal("2.0"));
+        bets = Sandbox.addMarketAndStateToMap(bets,1,new BigDecimal("2.0"));
+        Map<Long, BigDecimal> expectedBets = new HashMap<>();
+        expectedBets.put(new Long("1"),new BigDecimal("4.0"));
+        assertEquals(expectedBets,bets);
+    }
+
+
+    /*
+    @Test
     public void ex3_1_2() throws Exception {
         assertTrue(false);
     }
@@ -106,5 +130,5 @@ public class SandboxTest {
     @Test
     public void ex3_2() throws Exception {
         assertTrue(false);
-    }
+    }*/
 }

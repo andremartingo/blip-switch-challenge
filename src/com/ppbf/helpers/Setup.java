@@ -70,7 +70,7 @@ public class Setup {
                             updatedMoney = Sandbox.validateAndUpdateTotalMoney(lines, TOTAL_MONEY, marketId, stake);
                             if (updatedMoney != null) {
                                 TOTAL_MONEY = updatedMoney;
-                                bets = Sandbox.addMarketAndStateToMap(bets, marketId, stake);
+                                Sandbox.addMarketAndStateToMap(bets, marketId, stake);
                             } else {
                                 System.out.println("Error...");
                             }

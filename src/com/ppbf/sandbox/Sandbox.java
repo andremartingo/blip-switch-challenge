@@ -55,26 +55,35 @@ public class Sandbox {
     //
     // TIP: use validateAndUpdateTotalMoney to validate all data and update totalMoney.
     //      use addMarketAndStateToMap to return a Map with the marketId and the stake.
-    public static BigDecimal validateAndUpdateTotalMoney(List<String> lines, BigDecimal totalMoney, long marketId, BigDecimal stake) {
+    public static boolean validateMarket(List<String> lines,long marketId){
         List<Bet> listBet = new ArrayList<>();
         listBet = parse(lines);
         for(Bet bet : listBet){
             if(bet.event.market.id == marketId){
-                totalMoney = totalMoney.subtract(stake);
-                return totalMoney;
+                return true;
             }
         }
-        return null;
+        return false;
+    }
+
+    public static BigDecimal validateAndUpdateTotalMoney(List<String> lines, BigDecimal totalMoney, long marketId, BigDecimal stake) {
+        if(validateMarket(lines,marketId)){
+            totalMoney = totalMoney.subtract(stake);
+            return totalMoney;
+        }else{
+            return null;
+        }
     }
 
     public static Map<Long, BigDecimal> addMarketAndStateToMap(Map<Long, BigDecimal> bets, long marketId, BigDecimal stake) {
         if(bets.get(marketId) != null){
             stake = bets.get(marketId).add(stake);
             bets.put(marketId,stake);
+            return bets;
         }else {
             bets.put(marketId,stake);
+            return bets;
         }
-        return bets;
     }
 
     // Ex3_2: Given a List of lines on the file;
