@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="150" src="https://vignette.wikia.nocookie.net/logopedia/images/6/6a/Java-logo.jpg/revision/latest?cb=20150321072347" />
+</p>
+
 ## Bet:
 
 This is what a bet is all about
